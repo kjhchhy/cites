@@ -3,122 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CITES 생물 관리 서비스 | 프로젝트 기획서</title>
+  <title>CITES 애완동물 관리 서비스 | 프로젝트 기획서</title>
   <style>
-    :root { --ink:#172033; --muted:#526075; --brand:#19765b; --pale:#edf8f3; --line:#d9e5df; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:#f6f8f7; color:var(--ink); font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif; line-height:1.75; }
-    main { max-width:980px; margin:0 auto; padding:56px 24px 80px; }
-    header { padding:42px; color:white; background:linear-gradient(135deg,#124b3a,#19765b); border-radius:20px; }
-    .eyebrow { margin:0; color:#bce9d7; font-weight:700; letter-spacing:.04em; font-size:.9rem; }
-    h1 { margin:8px 0 10px; font-size:clamp(2rem,5vw,3.2rem); line-height:1.2; }
-    header p:last-child { margin-bottom:0; font-size:1.1rem; }
-    section { margin-top:28px; padding:30px; background:white; border:1px solid var(--line); border-radius:16px; }
-    h2 { margin:0 0 14px; font-size:1.5rem; } h3 { margin:24px 0 8px; font-size:1.08rem; }
-    p { margin:8px 0; } .summary { padding:18px 20px; background:var(--pale); border-left:4px solid var(--brand); border-radius:0 10px 10px 0; }
-    ul,ol { margin:8px 0; padding-left:1.35rem; } li+li { margin-top:7px; }
-    table { width:100%; border-collapse:collapse; margin-top:14px; font-size:.95rem; } th,td { padding:13px; border:1px solid var(--line); vertical-align:top; text-align:left; } th { background:#f0f7f3; }
-    .flow { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:16px; } .step { padding:10px 14px; background:var(--pale); border-radius:10px; font-weight:700; } .arrow { color:var(--brand); font-weight:700; }
-    .question { padding:14px 16px; border-radius:10px; background:#fff9e8; border:1px solid #f2df9b; }
+    :root { --ink:#18342d; --muted:#50665f; --brand:#176b55; --pale:#eff8f3; --line:#d8e8df; --notice:#fff8e5; }
+    * { box-sizing:border-box; } body { margin:0; background:#f7faf8; color:var(--ink); font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif; line-height:1.75; }
+    main { max-width:980px; margin:auto; padding:48px 24px 80px; } header { padding:42px; color:#fff; background:linear-gradient(135deg,#164a3b,#238166); border-radius:20px; }
+    .eyebrow { margin:0; color:#c9ebdc; font-weight:700; letter-spacing:.06em; font-size:.9rem; } h1 { margin:8px 0 12px; font-size:clamp(2rem,5vw,3.3rem); line-height:1.2; } header p { margin-bottom:0; font-size:1.1rem; }
+    section { margin-top:26px; padding:30px; background:#fff; border:1px solid var(--line); border-radius:16px; } h2 { margin:0 0 14px; font-size:1.55rem; } h3 { margin:22px 0 8px; font-size:1.08rem; }
+    p { margin:8px 0; } .summary { padding:18px 20px; background:var(--pale); border-left:4px solid var(--brand); border-radius:0 10px 10px 0; font-size:1.08rem; }
+    ul,ol { margin:8px 0; padding-left:1.35rem; } li + li { margin-top:7px; } table { width:100%; border-collapse:collapse; margin-top:14px; font-size:.95rem; } th,td { padding:13px; border:1px solid var(--line); text-align:left; vertical-align:top; } th { background:#f0f8f4; }
+    .flow { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:16px; } .step { padding:10px 14px; border-radius:10px; background:var(--pale); font-weight:700; } .arrow { color:var(--brand); font-weight:700; }
+    .notice { padding:16px 18px; background:var(--notice); border:1px solid #efdfaa; border-radius:10px; } a { color:var(--brand); font-weight:700; }
   </style>
 </head>
 <body>
   <main>
+    <a href="../index.html">← 프로젝트 첫 화면</a>
     <header>
-      <p class="eyebrow">PROJECT PLAN</p>
-      <h1>CITES 생물·서류·거래처 관리 서비스</h1>
-      <p>소규모 전문 샵 운영자가 개체와 증빙 기록을 한곳에서 관리하도록 돕는 웹 서비스 기획서</p>
+      <p class="eyebrow">PROJECT PLAN · FIRST VERSION</p>
+      <h1>CITES 애완동물<br>개인 브리더 관리 서비스</h1>
+      <p>개체·서류·사진·증식 기록을 안전하고 쉽게 정리하는 개인용 관리 도구</p>
     </header>
 
     <section>
       <h2>1. 프로젝트 목적</h2>
-      <p class="summary">CITES 대상 생물을 사육·관리하는 개인이 개체 정보, 사진, 번식 기록, 관련 서류와 중요한 일정을 한곳에서 확인하고 관리할 수 있게 한다.</p>
-      <p>흩어진 파일과 개인 기억에 의존하던 업무를 정리해, 개체의 이력과 증빙 사진을 빠르게 찾고 신고에 필요한 기록을 놓치지 않게 하는 것이 목표다.</p>
+      <p class="summary">개인 브리더가 사육하는 CITES 대상 애완동물의 개체 정보, 관련 서류, 사진과 증식 기록을 한곳에서 관리하도록 돕는 웹 서비스다.</p>
+      <p>휴대전화 사진첩, 컴퓨터 폴더, 종이 서류철에 흩어진 기록을 개체별로 연결해, 필요한 사진과 이력을 빠르게 찾고 증식신고에 참고할 정보를 놓치지 않게 한다.</p>
     </section>
 
     <section>
       <h2>2. 대상 사용자</h2>
-      <h3>주 사용자: CITES 대상 생물을 사육·번식하는 개인</h3>
-      <p>파충류 등을 사육하며 개체의 출생·번식 기록과 증빙 사진, 관련 서류를 직접 관리한다. 현재는 휴대전화 사진첩, 컴퓨터 폴더, 메신저, 종이 서류철에 자료가 나뉘어 있다. 사업자용 기능은 이후 단계에서 검토한다.</p>
-      <h3>사용 상황</h3>
+      <h3>주 사용자: CITES 대상 애완동물을 사육·번식하는 개인 브리더</h3>
+      <p>파충류 등 CITES 대상 생물을 사육하며 개체의 출생·보유·양도 이력, 관련 증빙과 번식 사진을 직접 기록하는 사람이다. 직원·거래처 관리가 필요한 사업자용 기능은 첫 버전의 범위에서 제외한다.</p>
+      <h3>대표적인 사용 상황</h3>
       <ul>
-        <li>특정 개체의 출생·번식 이력과 증빙 사진을 바로 확인해야 할 때</li>
-        <li>산란·부화가 발생한 뒤 날짜, 부화 온도, 사진을 기록할 때</li>
-        <li>증식신고 등에 필요한 개체·번식 기록을 모아 점검할 때</li>
-        <li>양도한 개체와 연결된 자료의 보관 상태를 정리할 때</li>
+        <li>특정 개체의 출생·보유 이력과 관련 사진을 바로 확인할 때</li>
+        <li>산란·부화 후 날짜, 부화 온도, 증빙 사진을 기록할 때</li>
+        <li>증식신고를 준비하며 필요한 개체·번식 기록을 모을 때</li>
+        <li>개체 양도 후, 관련 자료의 보관 상태를 정리할 때</li>
       </ul>
     </section>
 
     <section>
       <h2>3. 사용자가 겪는 문제</h2>
       <ul>
-        <li>개체 사진과 서류가 여러 장소에 흩어져 있어, 필요한 순간에 빠르게 찾기 어렵다.</li>
-        <li>산란일·부화일·부화 온도 같은 번식 기록을 기억이나 메모에 의존해 누락하기 쉽다.</li>
-        <li>증식신고에 필요한 사진과 기록을 한 번에 모으기 어렵다.</li>
-        <li>양도한 개체의 자료를 언제 지워도 되는지, 여러 개체가 연결된 서류는 어떻게 관리해야 하는지 혼란스럽다.</li>
-        <li>고용량 사진이 쌓이며 저장 공간이 부족해질 수 있다.</li>
+        <li>개체 사진과 서류가 사진첩·메일·폴더·종이 서류철에 흩어져 필요할 때 찾기 어렵다.</li>
+        <li>산란일, 부화일, 부화 온도 같은 번식 정보를 메모나 기억에 의존해 누락하기 쉽다.</li>
+        <li>증식신고에 참고할 사진과 기록을 한 번에 모으려면 여러 곳을 다시 확인해야 한다.</li>
+        <li>양도한 개체의 자료를 언제 정리할지, 여러 개체가 연결된 서류를 어떻게 보관할지 헷갈린다.</li>
+        <li>고용량 사진이 계속 쌓여 저장 공간이 부족해질 수 있다.</li>
       </ul>
     </section>
 
     <section>
       <h2>4. 해결 방법</h2>
       <table>
-        <thead><tr><th>사용자 불편</th><th>서비스 해결 방식</th></tr></thead>
+        <thead><tr><th>사용자 불편</th><th>첫 버전의 해결 방식</th></tr></thead>
         <tbody>
-          <tr><td>사진·서류를 찾기 어렵다</td><td>개체마다 관련 서류와 사진을 연결해 한 화면에서 조회한다.</td></tr>
-          <tr><td>번식 기록이 누락된다</td><td>산란일, 부화일, 부화 온도와 관련 사진을 개체 또는 번식 기록에 남긴다.</td></tr>
-          <tr><td>신고 자료를 모으기 어렵다</td><td>개체별 이력과 증빙 사진을 날짜순으로 관리해 필요한 기록을 빠르게 검토한다.</td></tr>
-          <tr><td>양도 뒤 자료 정리가 어렵다</td><td>양도 상태와 연결 개체 수를 확인하고, 서류의 모든 연결 개체가 양도된 뒤 1개월 후 삭제 후보로 표시한다.</td></tr>
-          <tr><td>사진 저장 공간이 부족하다</td><td>사진 업로드 때 용량을 줄이는 기능을 제공하고, 보관 공간 사용량을 보여 준다.</td></tr>
+          <tr><td>자료가 흩어져 있다</td><td>개체별 페이지에 사진, 서류, 번식 기록을 연결해 한곳에서 조회한다.</td></tr>
+          <tr><td>번식 기록을 놓친다</td><td>산란일, 부화일, 부화 온도, 알 수·부화 수와 관련 사진을 선택적으로 기록한다.</td></tr>
+          <tr><td>사진 용량이 부담된다</td><td>업로드 시 사진 용량 축소 기능과 저장 공간 사용량 안내를 제공한다.</td></tr>
+          <tr><td>양도 후 자료 정리가 어렵다</td><td>연결된 모든 개체가 양도된 뒤 1개월이 지난 서류·사진을 삭제 후보로 안내한다. 실제 삭제는 사용자가 확인한다.</td></tr>
+          <tr><td>중요한 일을 잊는다</td><td>첫 버전에서는 서비스 내부 알림으로 확인이 필요한 기록과 삭제 후보를 알려 준다.</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>5. 첫 화면 구성</h2>
+      <h2>5. 화면 구성</h2>
       <table>
-        <thead><tr><th>섹션</th><th>보여줄 내용</th><th>필요 요소</th></tr></thead>
+        <thead><tr><th>화면</th><th>보여줄 내용</th><th>주요 행동</th></tr></thead>
         <tbody>
-          <tr><td>상단 내비게이션</td><td>서비스명과 대시보드·개체·번식 기록·사진·서류 메뉴</td><td>로그인, 회원가입</td></tr>
-          <tr><td>핵심 소개</td><td>개체·사진·번식 기록·서류를 한곳에서 관리한다는 가치 제안</td><td>무료로 시작하기, 데모 보기</td></tr>
-          <tr><td>문제 공감</td><td>사진 분산, 번식 기록 누락, 저장 공간 부족의 불편</td><td>안내 콘텐츠</td></tr>
-          <tr><td>주요 기능</td><td>개체 이력, 사진 관리·압축, 번식 기록, 서류 관리, 내부 알림</td><td>기능 상세 보기</td></tr>
-          <tr><td>사용 흐름</td><td>개체 등록 → 사진·서류 연결 → 번식 기록 → 내부 알림 확인</td><td>시작하기</td></tr>
-          <tr><td>신뢰·FAQ·푸터</td><td>권한, 백업, 변경 이력, 자주 묻는 질문, 정책·문의</td><td>질문 펼치기, 문의하기</td></tr>
+          <tr><td>대시보드</td><td>보유 개체 수, 최근 기록, 내부 알림, 삭제 후보</td><td>개체 등록, 알림 확인</td></tr>
+          <tr><td>개체 목록</td><td>사진, 종명, 식별 정보, 보유 상태, 생물 종류 카테고리</td><td>검색·필터, 개체 선택</td></tr>
+          <tr><td>개체 상세</td><td>기본 정보, 사진, 연결 서류, 번식·양도 이력</td><td>정보 수정, 사진·서류 연결</td></tr>
+          <tr><td>번식 기록</td><td>부모 개체, 산란·부화 날짜, 부화 온도, 관련 사진</td><td>기록 추가·수정</td></tr>
+          <tr><td>사진·서류 보관함</td><td>사진 종류, 파일 용량, 연결 개체 수, 보관·삭제 후보 상태</td><td>업로드, 용량 축소, 삭제 후보 확인</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>6. 핵심 사용자 흐름</h2>
-      <div class="flow" aria-label="사용자 흐름">
-        <span class="step">회원가입·로그인</span><span class="arrow">→</span>
+      <h2>6. 사용자 흐름</h2>
+      <div class="flow" aria-label="핵심 사용자 흐름">
         <span class="step">개체 등록</span><span class="arrow">→</span>
         <span class="step">사진·서류 연결</span><span class="arrow">→</span>
-        <span class="step">번식 기록 등록</span><span class="arrow">→</span>
+        <span class="step">증식 기록 추가</span><span class="arrow">→</span>
         <span class="step">내부 알림 확인</span>
       </div>
       <ol>
-        <li>사용자는 새 개체의 종명, 식별번호, 입고일, 보유 상태를 입력하고 생물 종류 카테고리를 선택한다.</li>
-        <li>개체 사진과 필요한 서류를 첨부한다. 사진은 필요할 때 용량을 줄여 업로드한다.</li>
-        <li>산란·부화가 발생하면 날짜, 부화 온도와 관련 사진을 번식 기록에 추가한다.</li>
-        <li>대시보드에서 확인이 필요한 내부 알림과 양도 후 삭제 후보 자료를 점검한다.</li>
-        <li>신고 또는 기록 확인 시 개체 화면에서 이력, 사진, 연결 서류를 바로 확인한다.</li>
+        <li>사용자는 종명, 식별 정보, 입고·출생일, 보유 상태를 입력하고 생물 종류 카테고리를 선택한다.</li>
+        <li>개체 사진 또는 관련 서류를 첨부한다. 필요하면 사진 용량을 줄여 저장한다.</li>
+        <li>산란·부화가 발생하면 날짜, 부화 온도와 관련 사진을 번식 기록으로 추가한다.</li>
+        <li>대시보드에서 내부 알림과 삭제 후보 자료를 확인한다.</li>
+        <li>신고 준비 또는 기록 확인 때 개체 상세 화면에서 이력·사진·서류를 함께 본다.</li>
       </ol>
     </section>
 
     <section>
       <h2>7. 필요한 데이터</h2>
       <table>
-        <thead><tr><th>데이터 영역</th><th>주요 항목 예시</th></tr></thead>
+        <thead><tr><th>데이터 영역</th><th>주요 항목</th></tr></thead>
         <tbody>
-          <tr><td>개체 정보</td><td>생물 종류 카테고리, 종명, 학명, 개체 식별번호, 성별, 입고일, 보유 상태, 메모</td></tr>
-          <tr><td>사진 정보</td><td>사진 종류(개체·산란·부화·사육장 시설), 촬영일, 연결 개체·번식 기록, 압축 여부, 파일 용량</td></tr>
+          <tr><td>개체 정보</td><td>생물 종류 카테고리, 종명, 학명, 식별번호, 성별, 출생·입고일, 보유 상태, 메모</td></tr>
+          <tr><td>사진 정보</td><td>사진 종류(개체·산란·부화·사육장 시설), 촬영일, 연결 개체·번식 기록, 파일 용량, 압축 여부</td></tr>
           <tr><td>번식 기록</td><td>부모 개체, 산란일, 부화일, 부화 온도, 알 수·부화 수, 관련 사진, 메모</td></tr>
-          <tr><td>서류 정보</td><td>서류명, 파일, 연결 개체, 등록일, 삭제 후보일, 보관 상태</td></tr>
-          <tr><td>양도·이력</td><td>양도일, 대상 개체, 상태, 메모</td></tr>
-          <tr><td>내부 알림</td><td>알림 종류, 기준일, 표시일, 완료 상태</td></tr>
-          <tr><td>사용자</td><td>개인 계정, 저장 공간 사용량, 변경 이력</td></tr>
+          <tr><td>서류 정보</td><td>서류명, 파일, 연결 개체, 등록일, 보관 상태, 삭제 후보일</td></tr>
+          <tr><td>양도 이력</td><td>양도일, 대상 개체, 양도 상태, 메모</td></tr>
+          <tr><td>내부 알림</td><td>알림 종류, 기준일, 표시일, 확인·완료 상태</td></tr>
+          <tr><td>개인 설정</td><td>개인 계정, 저장 공간 사용량, 변경 이력</td></tr>
         </tbody>
       </table>
     </section>
@@ -126,24 +119,24 @@
     <section>
       <h2>8. 디자인 분위기</h2>
       <ul>
-        <li><strong>신뢰감 있고 차분한 개인 관리 도구:</strong> 과도하게 장식하기보다 정보의 상태와 다음 할 일을 명확히 보여 준다.</li>
-        <li><strong>자연 친화적이되 전문적인 색감:</strong> 짙은 녹색, 옅은 민트, 흰색을 중심으로 생물 관리의 성격과 문서 관리의 신뢰감을 함께 표현한다.</li>
-        <li><strong>한눈에 파악되는 화면:</strong> 상태 배지, 만료 임박 표시, 표와 카드로 정보를 빠르게 훑을 수 있게 한다.</li>
-        <li><strong>비개발자·소규모 사업자 친화성:</strong> 전문 용어에는 짧은 설명을 붙이고, 복잡한 입력을 단계별로 나눈다.</li>
+        <li><strong>신뢰감 있는 개인 관리 도구:</strong> 장식보다 기록 상태와 다음 행동을 명확히 보여 준다.</li>
+        <li><strong>자연 친화적이면서 전문적인 분위기:</strong> 짙은 녹색, 옅은 민트, 흰색을 중심으로 생물 관리와 문서 기록의 성격을 함께 표현한다.</li>
+        <li><strong>사진 중심의 정보 구성:</strong> 개체·산란·부화 사진을 날짜와 상태가 보이는 카드로 쉽게 확인한다.</li>
+        <li><strong>비개발자 친화성:</strong> 전문 용어에 짧은 설명을 붙이고, 입력 흐름은 작은 단계로 나눈다.</li>
       </ul>
     </section>
 
     <section>
       <h2>9. 개발 전 확인 질문</h2>
-      <div class="question">
+      <div class="notice">
         <ol>
-          <li><strong>관리 생물 범위:</strong> 초기 버전은 CITES 대상 생물 전반을 관리한다. 관리 방식은 공통으로 두되, 생물 종류별 카테고리로 분류한다.</li>
-          <li><strong>기록 범위:</strong> 정해진 서류 종류를 필수로 제한하지 않는다. 개체·산란·부화·사육장 시설 사진과 번식 정보를 선택적으로 기록한다.</li>
-          <li><strong>사진과 서류 보관:</strong> 사진은 용량 축소 기능을 제공한다. 연결된 모든 개체가 양도되어 서류 수량이 소진된 뒤 1개월이 지나면 해당 서류와 사진을 삭제 후보로 안내한다.</li>
-          <li><strong>알림 방식:</strong> 첫 버전에서는 서비스 내부 알림만 제공한다.</li>
-          <li><strong>계정·권한:</strong> 첫 버전은 개인용 단일 계정으로 시작한다. 사업자용 다중 계정과 권한은 이후 검토한다.</li>
-          <li><strong>자료 가져오기:</strong> 기존 엑셀·폴더 자료 가져오기는 첫 버전에 포함하지 않는다.</li>
-          <li><strong>법률·행정 고지:</strong> 서비스가 법률·행정 자문이나 신고의 정확성을 보증하지 않으며, 최신 기준은 관계 기관에 확인해야 한다는 고지를 제공한다.</li>
+          <li>첫 버전에서 지원할 생물 종류 카테고리는 어떻게 나눌 것인가?</li>
+          <li>개체를 식별하는 핵심 정보는 무엇이며, 필수·선택 항목을 어떻게 구분할 것인가?</li>
+          <li>사진 파일의 최대 용량, 지원 형식, 자동 압축 품질은 어느 수준으로 정할 것인가?</li>
+          <li>서류·사진은 실제 자동 삭제가 아니라 삭제 후보 안내와 사용자 확인으로 시작할 것인가?</li>
+          <li>증식 기록에서 산란일·부화일·부화 온도 외에 첫 버전부터 필요한 항목은 무엇인가?</li>
+          <li>데이터를 클라우드에 저장할 때 백업 방식과 개인정보·사진 접근 보호는 어떻게 할 것인가?</li>
+          <li>서비스가 법률·행정 자문이나 신고의 정확성을 보증하지 않으며, 최신 기준은 관계 기관에 확인해야 한다는 고지를 어디에 표시할 것인가?</li>
         </ol>
       </div>
     </section>
